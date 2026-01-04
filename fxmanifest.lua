@@ -11,6 +11,8 @@ ui_page 'html/index.html'
 
 client_script 'client/client.lua'
 
+server_script 'server/version_check.lua'
+
 files {
     'html/index.html',
     'html/style.css',

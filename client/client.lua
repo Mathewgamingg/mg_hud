@@ -1,7 +1,6 @@
 local hudVisible = true
 local notifiedHunger = false
 local notifiedThirst = false
-local inVehicle = false
 
 local currentHunger, currentWater, currentStress = 0, 0, 0
 
@@ -19,16 +18,6 @@ Citizen.CreateThread(function()
     while true do
         local ped = PlayerPedId()
         local playerId = PlayerId()
-        local veh = GetVehiclePedIsIn(ped, false)
-        
-        inVehicle = (veh ~= 0)
-        local speed = 0
-        local fuelLevel = 0
-
-        if inVehicle then
-            speed = math.ceil(GetEntitySpeed(veh) * 3.6)
-            fuelLevel = exports['mg_bridge']:GetFuel(veh)
-        end
         
         local proximityData = LocalPlayer.state.proximity or {index = 1}
         local pmaLevel = proximityData.index or 1
@@ -90,10 +79,6 @@ Citizen.CreateThread(function()
             stress = currentStress,
             oxygen = GetPlayerUnderwaterTimeRemaining(playerId) * 10,
             
-            inVehicle = inVehicle,
-            speed = speed,
-            fuel = fuelLevel,
-            
             inWater = IsPedSwimmingUnderWater(ped),
             enableStress = Config.EnableStress,
             
@@ -106,6 +91,6 @@ Citizen.CreateThread(function()
             DisplayRadar(false) 
         end
 
-        Citizen.Wait(inVehicle and 16 or 500)
+        Citizen.Wait(Config.UpdateTick or 200)
     end
 end)

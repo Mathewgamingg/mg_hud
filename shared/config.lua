@@ -1,13 +1,13 @@
 Config = {}
 Config.Framework = 'esx' -- esx, qb
-Config.UpdateTick = 200
-Config.ServerLogoURL = "https://cdn.discordapp.com/avatars/324539170188165120/996db60a903bfabd95fc49cab69cd9eb.webp?size=1024"
+Config.UpdateTick = 250 -- Jak často se HUD aktualizuje (v ms)
+Config.ServerLogoURL = "https://cdn.discordapp.com/attachments/1428438518459400214/1457491334159138940/mathew-logo-final.png?ex=695c3214&is=695ae094&hm=486c568162d71674823f8692f02ea7e5b334611d24454c076bb74134d183945d&"
 Config.EnableStress = false
 
 Config.Locales = {
     ['hunger_notif'] = "Máš velký hlad, měl by ses najíst!",
     ['thirst_notif'] = "Máš velkou žízeň, měl by ses napít!",
-    ['stress_notif'] = "Cítíš se pod velkým tlakem, měl bys zvolnit!", -- Pro budoucí využití
+    ['stress_notif'] = "Cítíš se pod velkým tlakem, měl bys zvolnit!",
 }
 
 Config.NotificationType = "error"
@@ -31,8 +31,7 @@ Config.Colors = {
     ['oxygen'] = "#1abc9c",
     ['voice'] = "#ffffff",
     ['voiceTalking'] = "#049edaff",
-    ['id'] = "#ffffff",
-    ['speed'] = "#ffa500"
+    ['id'] = "#ffffff"
 }
 
 Config.Thresholds = {
