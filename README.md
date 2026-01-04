@@ -45,3 +45,4 @@ mg_bridge (pro notifikace a palivo - pokud je vyžadováno)
 
 🎨 Náhled
 
+https://cdn.discordapp.com/attachments/1457492862441885707/1457495420375793685/image.png?ex=695c35e3&is=695ae463&hm=7d6d36b0d0fea70da02261de1cc377c022c76b35285da1927c6c4cba0e7e8a7a&
